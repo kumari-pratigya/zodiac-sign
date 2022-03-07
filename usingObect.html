@@ -1,0 +1,85 @@
+<html>
+<head>
+<title> Zodiac sign</title>
+<link rel="stylesheet"  href="css/zodiac.css">
+<link rel="stylesheet" href="css/bootstrap.min.css">
+<link rel="stylesheet" href="css/mediaqueries.css">
+<script>
+       var value=document.getElementById("username").value;
+        // console.log(value);
+        var x=new Date(value);
+        var month=x.getMonth();
+        var day=x.getDate();
+        console.log(month);
+        console.log(day);
+  const month=["January","February","March","April","May","June","July","August","September","October","November","December"];
+   const day=[1,2,3,5,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31]
+  if(){
+
+  }
+//   const data={
+//       month:"January", 
+//         date0:function (day) {
+//             if(day<20)
+//                 document.getElementById("message").innerHTML="Capricon";
+//                 else 
+//                 document.getElementById("message").innerHTML="Aquarius"; 
+          
+//         },  
+//         month:"February",
+//         date1:function(day){
+//             if(day<19)
+//                  document.getElementById("message").innerHTML="Aquarius";
+//                  else if(day>28){
+//                     document.getElementById("message").style.display="none";
+//                  }
+//             else 
+//                 document.getElementById("message").innerHTML="Pisces";    
+//         },
+//         month:"March",
+//         date2:function(day){
+//             if(day<21)
+//                  document.getElementById("message").innerHTML="Pisces";
+//             else 
+//                 document.getElementById("message").innerHTML="Aries";    
+//         },
+//         month:"April",
+//         date3:function(day){
+//         if(day<20)
+//                  document.getElementById("message").innerHTML="Aries";
+//             else 
+//                 document.getElementById("message").innerHTML="Taurus";
+//         },
+//         month:"May",
+//         date4:function(day){
+//             if(day<21)
+//                  document.getElementById("message").innerHTML="Taurus";
+//         },
+//         month:"June",
+//         date5:function(day){
+//         },
+//         month:"July",
+//         month:"August",
+//         month:"September",
+//         month:"October",
+//         month:"November",
+//         month:"December"
+      
+</script>
+</head>
+<body style="background-image:url('bjhv.jpg')" >
+    <div style="background-image: url('Signs-of-the-Zodiac-astrology.jpg');" class="container">
+         <h1> Zodiac sign</h1>
+         <div class="form-group">
+                
+                <input type="date" class="form-control"  id="username" placeholder="Enter the date" name="username" autocomplete="off" > 
+      <p   class="text-danger font-weight-bold" id="error1"></p>
+    </div> 
+                 <button onclick="show()" >Login</button>    
+                <button type="button" class="cancelbtn"> Cancel</button>   
+          </form>
+          <h1   class="text-danger font-weight-bold" id="message"></h1>
+        </div>
+        
+</body>
+</html>

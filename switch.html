@@ -1,0 +1,116 @@
+<html>
+<head>
+<title> Zodiac sign</title>
+<link rel="stylesheet"  href="css/zodiac.css">
+<link rel="stylesheet" href="css/bootstrap.min.css">
+<link rel="stylesheet" href="css/mediaqueries.css">
+<script>
+    //function submit the form
+        function show(){
+    //get the day and month value from in variable
+        var value=document.getElementById("username").value;
+        // console.log(value);
+        var x=new Date(value);
+        var month=x.getMonth();
+        var day=x.getDate();
+        console.log(month);
+        console.log(day);
+        switch (month) {
+        case 0: 
+            if(day<20)
+                document.getElementById("message").innerHTML="Capricon";
+                else 
+                document.getElementById("message").innerHTML="Aquarius";         
+             break;
+        case 1: 
+             if(day<19)
+                 document.getElementById("message").innerHTML="Aquarius";
+                 else if(day>28){
+                    document.getElementById("message").style.display="none";
+                 }
+            else 
+                document.getElementById("message").innerHTML="Pisces";
+        
+        break
+            
+        case 2:if(day<21)
+                 document.getElementById("message").innerHTML="Pisces";
+            else 
+                document.getElementById("message").innerHTML="Aries";
+                 break;
+       
+        case 3: if(day<20)
+                 document.getElementById("message").innerHTML="Aries";
+            else 
+                document.getElementById("message").innerHTML="Taurus";
+        
+                break;
+        case 4: if(day<21)
+                 document.getElementById("message").innerHTML="Taurus";
+            else 
+                document.getElementById("message").innerHTML="Gemini";
+        break;
+       
+        case 5: if(day<21)
+                 document.getElementById("message").innerHTML="Gemini";
+            else 
+            document.getElementById("message").innerHTML="Cancer"; 
+        break;
+       
+         case 6:   if(day<23)
+                 document.getElementById("message").innerHTML="Cancer";
+            else 
+                document.getElementById("message").innerHTML="Leo";
+        break;
+        
+        case 7 :if(day<23)
+                document.getElementById("message").innerHTML="Leo";
+            else 
+                document.getElementById("message").innerHTML="Virgo";
+        
+        
+        case 8: if(day<23)
+            document.getElementById("message").innerHTML="Virgo";
+            else 
+                document.getElementById("message").innerHTML="Libra";
+        break;
+       
+        case 9:if(day<23)
+                 document.getElementById("message").innerHTML="Libra";
+            else 
+                document.getElementById("message").innerHTML="Scorpio";
+        break;
+        case 10:if(day<22)
+                 document.getElementById("message").innerHTML="Scorpio";
+            else 
+                document.getElementById("message").innerHTML="Sagittarius";
+        break;
+        case 11: if(day<22)
+                 document.getElementById("message").innerHTML="Sagittarius";
+            else 
+                document.getElementById("message").innerHTML="Capricon";
+        
+
+           
+        }
+            
+        }
+    
+</script>
+</head>
+<body style="background-image:url('bjhv.jpg')" >
+    <div style="background-image: url('Signs-of-the-Zodiac-astrology.jpg');" class="container">
+         <h1> Zodiac sign</h1>
+         <div class="form-group">
+                
+                <input type="date" class="form-control"  id="username" placeholder="Enter the date" name="username" autocomplete="off" > 
+      <p   class="text-danger font-weight-bold" id="error1"></p>
+    </div> 
+                 <button onclick="show()" >Login</button>    
+                <button type="button" class="cancelbtn"> Cancel</button>   
+          </form>
+          <h1   class="text-danger font-weight-bold" id="message"></h1>
+        </div>
+        
+</body>
+</html>

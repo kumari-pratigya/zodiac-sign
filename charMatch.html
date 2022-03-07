@@ -1,0 +1,81 @@
+<html>
+<head>
+<title> program</title>
+<link rel="stylesheet"  href="css/zodiac.css">
+<link rel="stylesheet" href="css/bootstrap.min.css">
+<link rel="stylesheet" href="css/mediaqueries.css">
+<script>
+    function show(){
+    //get string value in variable xand y
+    var x =document.getElementById("word1").value;
+    var y=document.getElementById("word2").value;
+    //changet the string into uppeercase
+    var x=x.toUpperCase();
+    var y=y.toUpperCase();
+    var c=[];
+    console.log(x,y);
+    // in for loop check the both string character if match then put in array c and print in ui
+    for( var i=0;i<x.length;i++){
+        console.log( x.includes(y[i]));
+        if(y.includes(x[i])){
+            console.log(x[i]);
+            c.push(x[i]);
+            document.getElementById("Answer").innerHTML=c;    
+        }
+        
+    }
+}
+    // var word1=x.split("");
+    // var word2=y.split("");
+    // const result=JSON.stringify(word1[0])===JSON.stringify(word2[0]);
+    // if(result){
+    //     console.log("the string is same");
+    // }
+    // for(s in word1){
+    //     var idx = word1[s];
+    //     console.log(idx);
+    // }
+    // for(s in word2){
+    //     var id = word2[s];
+    //     console.log(id);
+    // }
+//    console.log(find(idx===(id))); 
+//    console.log(x.split(""));
+//    console.log(y.split(""));
+//     console.log(y);
+
+        //check odd and even no 
+     function show1(){
+        var n =document.getElementById("number").value; 
+        console.log(n);  
+        if(n%2==0)  {
+            document.getElementById("Answer").innerHTML="number is Even";
+        }
+        else{
+            document.getElementById("Answer").innerHTML="number is odd"; 
+        }
+     }
+    
+    
+</script>
+</head>
+<body bgColor="green">
+    <!-- create  input field and button to check character -->
+    <div class="check">
+            <h1> Character Match:-</h1>
+    <label>Enter the first word</label>
+  <input type="text" id="word1">
+  <label>Enter the Second word</label>
+  <input type="text" id="word2">  
+  <button type="submit" onclick="show()"> check</button>  
+  </div>
+  <!-- create text and button to check odd and even no  -->
+  <div class="odd and Even">
+      <h1> check odd and even no:-</h1>
+        <label>Enter the first word</label>
+        <input type="number" id="number">  
+        <button onclick="show1()"> check</button> 
+        <h1 id="Answer"></h1>
+    </div>
+</body>
+</html>

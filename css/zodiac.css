@@ -1,0 +1,15 @@
+body{
+    overflow: hidden;
+}
+h1{
+    
+    text-align:center; 
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.container{
+    width:700px;
+    height:400px;
+    text-align:center; 
+    border:1px solid red;
+    margin: 100px;
+}

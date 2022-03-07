@@ -1,0 +1,149 @@
+7<html>
+<head>
+<title> Zodiac sign</title>
+<link rel="stylesheet"  href="css/zodiac.css">
+<link rel="stylesheet" href="css/bootstrap.min.css">
+<link rel="stylesheet" href="css/mediaqueries.css">
+<script>
+    //function submit the form
+        function show(){
+    //get the day and month value from in variable
+        let day=document.getElementById("day").value;
+        let month=document.getElementById("month").value;
+     console.log(day);
+    console.log(month);
+
+        // var value=document.getElementById("username").value;
+
+        // // console.log(value);
+        // var x=new Date(value);
+        // console.log(x.getMonth());
+        // console.log(x.getDate());
+     //check month and day   
+        if(month=="january"){
+            if(day<20)
+                document.getElementById("message").innerHTML="Capricon";
+                else 
+                document.getElementById("message").innerHTML="Aquarius";         
+        }
+        else if(month=="february"){
+            if(day<19)
+                 document.getElementById("message").innerHTML="Aquarius";
+                 else if(day>28){
+                    document.getElementById("message").style.display="none";
+                    document.getElementById("error").innerHTML="**please enter the correct date";
+                 }
+            else 
+                document.getElementById("message").innerHTML="Pisces";
+        }
+        else if(month=="March"){
+            if(day<21)
+                 document.getElementById("message").innerHTML="Pisces";
+            else 
+                document.getElementById("message").innerHTML="Aries";
+        }
+        else if(month=="April"){
+            if(day<20)
+                 document.getElementById("message").innerHTML="Aries";
+            else 
+                document.getElementById("message").innerHTML="Taurus";
+        }
+        else if(month=="May"){
+            if(day<21)
+                 document.getElementById("message").innerHTML="Taurus";
+            else 
+                document.getElementById("message").innerHTML="Gemini";
+        }
+        else if(month=="June"){
+            if(day<21)
+                 document.getElementById("message").innerHTML="Gemini";
+            else 
+            document.getElementById("message").innerHTML="Cancer"; 
+        }
+        else if(month=="july"){
+            if(day<23)
+                 document.getElementById("message").innerHTML="Cancer";
+            else 
+                document.getElementById("message").innerHTML="Leo";
+        }
+        else if(month=="August"){
+            if(day<23)
+                document.getElementById("message").innerHTML="Leo";
+            else 
+                document.getElementById("message").innerHTML="Virgo";
+        }
+        else if(month=="September"){
+            if(day<23)
+            document.getElementById("message").innerHTML="Virgo";
+            else 
+                document.getElementById("message").innerHTML="Libra";
+        }
+        else if(month=="October"){
+            if(day<23)
+                 document.getElementById("message").innerHTML="Libra";
+            else 
+                document.getElementById("message").innerHTML="Scorpio";
+        }
+        else if(month=="November"){
+            if(day<22)
+                 document.getElementById("message").innerHTML="Scorpio";
+            else 
+                document.getElementById("message").innerHTML="Sagittarius";
+        }
+        else if(month=="December"){
+            if(day<22)
+                 document.getElementById("message").innerHTML="Sagittarius";
+            else 
+                document.getElementById("message").innerHTML="Capricon";
+        }
+
+       
+        if(day==""){
+            document.getElementById("error").innerHTML="please enter the date";
+        }
+        if(day>31){
+            document.getElementById("error").innerHTML="**please enter the correct date";
+            document.getElementById("message").style.display="none";
+        }
+        if(month==""){
+            document.getElementById("error1").innerHTML="**please enter the Month";       
+        }
+    }  
+    
+</script>
+</head>
+<body style="background-image:url('bjhv.jpg')"; >
+    <div style="background-image: url('Signs-of-the-Zodiac-astrology.jpg');" class="container">
+         <h1> Zodiac sign</h1>
+         <div class="form-group">
+                
+                <!-- <input type="date" class="form-control"  id="username" placeholder="Enter the date" name="username" autocomplete="off" > -->
+                <label>Enter Date   </label>  
+                <input type="number" class="form-control"  id="day" placeholder="Enter the date" name="username" autocomplete="off" >
+                <p style="margin-left: 80px;"  class="text-danger font-weight-bold" id="error"></p>
+                <label for="lang">Month</label>
+      <select id="month" name="languages" id="lang">
+            <option disabled selected value> -- select an option -- </option>
+            <option id="month" value="january">january</option>
+            <option  id="month" value="february">february</option>
+            <option  id="month" value="March">March</option>
+            <option  id="month" value="April">April</option>
+            <option  id="month" value="May">May</option>
+            <option  id="month" value="June">June</option>
+            <option  id="month" value="july">july</option>
+            <option  id="month" value="August">August</option>
+            <option  id="month" value="September">September</option>
+            <option  id="month" value="October">October</option>
+            <option  id="month" value="November">November</option>
+            <option   id="month" value="December">December</option>
+      </select>
+      <p   class="text-danger font-weight-bold" id="error1"></p>
+                </div> 
+                 <button onclick="show()" >Login</button>    
+                <button type="button" class="cancelbtn"> Cancel</button>   
+          </form>
+          <h1   class="text-danger font-weight-bold" id="message"></h1>
+        </div>
+        
+</body>
+</html>
